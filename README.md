@@ -11,7 +11,8 @@
 
 This is a simple task list, where you can create tasks, mark them as completed, and delete them.
 
-Link to the app: https://lucent-torte-a73881.netlify.app/
+Link to the app: https://darling-semifreddo-c0aeea.netlify.app
+
 
 ### Screenshot
 
@@ -27,5 +28,5 @@ Link to the app: https://lucent-torte-a73881.netlify.app/
 
 ## Author
 
-- TikTok - [@elrincondeldev](https://www.tiktok.com/@elrincondeldev)
-- Instagram - [@elrincondeldev](https://www.instagram.com/elrincondeldev/)
+- Twitter - [@charlsef23](https://www.twitter.com/@charlsef23)
+- Instagram - [@charlsef23](https://www.instagram.com/charlsef23/)
