@@ -1,0 +1,346 @@
+/* General */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Modo oscuro */
+  body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  .container {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Modo oscuro para el contenedor */
+  body.dark-mode .container {
+    background: #1e1e1e;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    color: #222;
+    transition: color 0.3s ease;
+  }
+  
+  /* Modo oscuro para el título */
+  body.dark-mode h1 {
+    color: #e0e0e0;
+  }
+  
+  /* Selector de listas */
+  .list-selector {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .list-selector button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #addListBtn {
+    background-color: #007aff;
+    color: white;
+  }
+  
+  #addListBtn:hover {
+    background-color: #005ecf;
+  }
+  
+  #deleteListBtn {
+    background-color: #ff3b30;
+    color: white;
+  }
+  
+  #deleteListBtn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Estilos de las listas */
+  #listNames {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+  }
+  
+  .list-item {
+    background-color: #f4f4f4;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
+  
+  /* Modo oscuro para las listas */
+  body.dark-mode .list-item {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #444;
+  }
+  
+  .list-item.selected {
+    background-color: #007aff;
+    color: white;
+    border-color: #007aff;
+  }
+  
+  .list-item.selected:hover {
+    background-color: #005ecf;
+  }
+  
+  .list-item:hover {
+    background-color: #eaeaea;
+  }
+  
+  .list-item.selected:hover {
+    background-color: #005ecf;
+  }
+  
+  /* Botón de modo oscuro */
+  #darkModeToggle {
+    background-color: #007aff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #darkModeToggle:hover {
+    background-color: #005ecf;
+  }
+  
+  /* Filtros */
+  #filters {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .filter-btn {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .filter-btn.active {
+    background-color: #007aff;
+    color: white;
+    border-color: #007aff;
+  }
+  
+  .filter-btn:hover {
+    background-color: #e6e6e6;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background-color: #f4f4f4;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  li:hover {
+    background-color: #eaeaea;
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  
+  /* Estilos de los botones de tarea */
+  li button {
+    background-color: #007aff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  li button.delete-btn {
+    background-color: #ff3b30;
+  }
+  
+  li button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Estadísticas */
+  #stats {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  body.dark-mode #stats {
+    color: #ccc;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+  /* Estilo general para el formulario de tareas */
+#taskInput {
+    width: calc(100% - 110px);
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-right: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Estilo cuando se enfoca el campo de tarea */
+  #taskInput:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.5);
+  }
+  
+  /* Estilo para el botón de añadir tarea */
+  #addTaskBtn {
+    background-color: #007aff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px;
+    display: inline-block;
+  }
+  
+  #addTaskBtn:hover {
+    background-color: #005ecf;
+  }
+  
+  /* Estilo para la lista de tareas */
+  #taskList {
+    margin-top: 20px;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  /* Efecto hover sobre las tareas */
+  li:hover {
+    background-color: #eaeaea;
+    transform: scale(1.02);
+  }
+  
+  /* Tareas completadas */
+  li.completed {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  
+  /* Botones dentro de cada tarea */
+  li button {
+    background-color: #007aff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  li button:hover {
+    background-color: #005ecf;
+  }
+  
+  li button.delete-btn {
+    background-color: #ff3b30;
+  }
+  
+  li button.delete-btn:hover {
+    background-color: #d32f2f;
+  }
+  .task-input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+  
+  #clearCompletedBtn {
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  
+  #clearCompletedBtn:hover {
+    background-color: #e6b800;
+  }
