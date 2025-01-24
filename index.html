@@ -1,44 +1,50 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do</title>
+  <title>To-Do App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Mi To-Do</h1>
-    <button id="darkModeToggle">Cambiar modo</button>
-    <!-- Selector de listas -->
-    <div class="list-selector">
-      <button id="addListBtn">Añadir Lista</button>
-      <button id="deleteListBtn">Eliminar Lista</button>
-    </div>
+    <h1>To-Do App</h1>
     
-    <div id="listNames"></div>
-    
-    <!-- Filtros y Estadísticas -->
-    <div class="footer">
-      <div id="filters">
-        <button class="filter-btn active" data-filter="all">Todo</button>
-        <button class="filter-btn" data-filter="completed">Completado</button>
-        <button class="filter-btn" data-filter="pending">Pendiente</button>
-      </div>
-      <div id="stats">Total: 0 | Completado: 0 | Pendiente: 0</div>
+    <!-- Resumen de tareas -->
+    <div class="task-summary">
+      <h2>Summary</h2>
+      <p id="summaryText">Total: 0 | Pending: 0 | Overdue: 0</p>
     </div>
 
-    <!-- Input para nuevas tareas -->
+    <!-- Selección de listas -->
+    <div class="list-controls">
+      <input type="text" id="listInput" placeholder="New list name...">
+      <button id="addListBtn">Add List</button>
+      <div id="lists"></div>
+    </div>
+
+    <!-- Entrada de tareas -->
     <div class="task-input-container">
-        <input type="text" id="taskInput" placeholder="Añadir tarea ..." />
-        <button id="addTaskBtn">Añadir tarea</button>
-      </div>
+      <input type="text" id="taskInput" placeholder="Add a new task...">
+      <select id="taskPriority">
+        <option value="low">Low Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="high">High Priority</option>
+      </select>
+      <input type="date" id="taskDueDate">
+      <button id="addTaskBtn">Add Task</button>
+    </div>
+
+    <!-- Campo de búsqueda -->
+    <div class="task-search-container">
+      <input type="text" id="taskSearchInput" placeholder="Search tasks...">
+    </div>
+
+    <!-- Botón para completar todas las tareas -->
+    <button id="completeAllBtn">Mark All as Completed</button>
 
     <!-- Lista de tareas -->
     <ul id="taskList"></ul>
-    
-    <!-- Botón para eliminar tareas completadas -->
-    <button id="clearCompletedBtn">Limpiar completadas</button>
   </div>
 
   <script src="script.js"></script>
